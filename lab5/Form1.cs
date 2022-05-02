@@ -64,9 +64,9 @@ namespace lab5
             conn.Open();
             SqlCommand cmd = new SqlCommand("InsertPerson", conn);
 
-            if (txtHireDate.Text == "")
+            if (txtHireDate.Text == "" || txtHireDate.Checked == false)
                 txtHireDate.Text = null;
-            if (txtEnrollmentDate.Text == "")
+            if (txtEnrollmentDate.Text == "" || txtHireDate.Checked == false)
                 txtEnrollmentDate = null;
 
             cmd.Parameters.AddWithValue("@FirstName", txtNombre);
